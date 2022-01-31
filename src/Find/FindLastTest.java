@@ -32,6 +32,14 @@ public class FindLastTest
         assertEquals("Something else fucked?", -1,FindLast.findLast(arr,y));
     }
 
+    @Test
+    //4 typo in test => error however program still does as expected.
+    public void errorNoFailure(){
+        int arr[] = {1,2,3,4,5,6};
+        int y = 2;
+        assertEquals("Found correctly or something?", 2, FindLast.findLast(arr,y));
+    }
+
     @Test public void lastOccurrenceInFirstElementFixed()
     {
         int arr[] = {2, 3,5};
