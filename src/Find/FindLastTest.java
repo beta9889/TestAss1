@@ -15,6 +15,10 @@ public class FindLastTest
     }
 
     // ----------------------------------------------------------------
+
+    //Kommentar för att testa git
+
+
     @Test
     //2 not first position => not fucked
     public void lastOccNoFault(){
