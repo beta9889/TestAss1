@@ -11,7 +11,7 @@ public class FindLastTest
     {
         int arr[] = {2, 3,5};
         int y = 2;
-        assertEquals("Last occurence in first element", 0, FindLast.findLast(arr, y));
+        assertEquals("Last occurrence in first element", 0, FindLast.findLast(arr, y));
     }
 
     // ----------------------------------------------------------------
@@ -68,7 +68,7 @@ public class FindLastTest
         int y = 0;
         assertEquals("Something else fucked?", -1,FindLast.findLastfixed(arr,y));
     }
-    /** error without fault not possible because fault -> error*/
+    /* error without fault not possible because fault -> error*/
 
     // -----------------------------------------------------------------
     // Add your tests below with a comment stating which question it belongs to
