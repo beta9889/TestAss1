@@ -12,8 +12,9 @@ public class FindLast {
      */
 
     public static int findLast (int[] x, int y)
-    {
-        for (int i=x.length-1; i > 0; i--)  //fault. does not check position 0
+    { int i;
+
+        for (i=x.length-1; i > 0; i--)  //fault. does not check position 0
         {
             if (x[i] == y)
             {
@@ -24,15 +25,15 @@ public class FindLast {
     }
 
     public static int findLastfixed (int[] x, int y)
-    {
-        for (int i=x.length-1; i >= 0; i--)  //fault. does not check position 0
+    {int i;
+        for (i=x.length-1; i >= 0; i--)  //fault. does not check position 0
         {
             if (x[i] == y)
             {
                 return i;
             }
         }
-        return -1;
+        return i;
     }
 
     public static void main(String[] argv) {
