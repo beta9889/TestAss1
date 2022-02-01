@@ -28,8 +28,8 @@ public class FindLastTest
     //3 still skips first position however expected is -1 so no error
     public void lastOccNotInArray(){
         int[] arr = {1,2,3,4,5,6,7,8,9};
-        int y = 0;
-        assertEquals("Something else fucked?", -1,FindLast.findLast(arr,y));
+        int y = 3;
+        assertEquals( 2,FindLast.findLast(arr,y));
     }
 
     //4 typo in test => error however program still does as expected.
