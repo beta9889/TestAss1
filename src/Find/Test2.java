@@ -14,12 +14,11 @@ public class Test2
     }
 
     // ----------------------------------------------------------------
-    @Test
-    //2 not first position => error however program still does as expected.
-    public void lastOccNoFaultFixed(){
-        int[] arr = {0,1,2,3,4};
+    @Test(expected = NullPointerException.class)
+    public void lastOccNoFault(){
+        int[] arr = null;
         int y = 2;
-        assertEquals( 2,FindLast.findLastfixed(arr,y));
+        FindLast.findLast(arr,y);
     }
 
     @Test
@@ -30,6 +29,7 @@ public class Test2
         assertEquals( -1,FindLast.findLastfixed(arr,y));
     }
 
+    //4
     @Test
     public void errorNoFailure(){
         int[] arr = {1,2,3,4,5,6};
