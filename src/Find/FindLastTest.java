@@ -16,19 +16,12 @@ public class FindLastTest
 
     // ----------------------------------------------------------------
 
-    //Kommentar för att testa git
-    //Mome komment för att confirm above
-    //hoooooooo
-    
-
-
-    @Test
-    //2 not first position => not fucked
+    //2 not first position
+    @Test(expected = NullPointerException.class)
     public void lastOccNoFault(){
-        int[] arr = {0,1,2,3,4};
+        int[] arr = null;
         int y = 2;
-        assertEquals("not first position still error", 2,FindLast.findLast(arr,y));
-
+        FindLast.findLast(arr,y);
     }
 
     @Test
@@ -39,12 +32,12 @@ public class FindLastTest
         assertEquals("Something else fucked?", -1,FindLast.findLast(arr,y));
     }
 
-    @Test
     //4 typo in test => error however program still does as expected.
+    @Test
     public void errorNoFailure(){
         int[] arr = {1,2,3,4,5,6};
         int y = 2;
-        assertEquals("Found correctly or something?", 2, FindLast.findLast(arr,y));
+        assertEquals( 2, FindLast.findLast(arr,y));
     }
 
     @Test public void lastOccurrenceInFirstElementFixed()
@@ -56,7 +49,7 @@ public class FindLastTest
 
     // ----------------------------------------------------------------
     @Test
-    //2 not first position => not fucked
+    //2 not first position => error however program still does as expected.
     public void lastOccNoFaultFixed(){
         int[] arr = {0,1,2,3,4};
         int y = 2;
